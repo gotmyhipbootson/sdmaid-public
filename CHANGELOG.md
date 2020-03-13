@@ -93,25 +93,7 @@
 
 ### AppCleaner
 - Added: ACS based cache deletion support for MIUI v11+.
-- Improved: Added workaround for apps with large caches on slow devices. Previously, if the system's details screen for an app was displaying "Calculating sizes...", SD Maid could treat this as successful deletion as there is also an edge case where the system tells SD Maid there is cache, but the "Clear cache" button is disabled as there isn't actually any cache (see #2517). Now SD Maid will backtrack and scan the UI hierarchy from a few levels up again and if all buttons are disabled, wait a bit, then try again (#3121).
-- Improved: ACS based cache deletion on Samsung OneUI 1.1 for Dutch.
-- Improved: ACS based cache deletion, faster UI crawling, better error handling.
-- Improved: Bug reporting filter (#3116).
-
-## SD Maid [v4.15.0](https://github.com/d4rken/sdmaid-public/milestone/110?closed=1) 22.11.2019
-### Core
-- Added: Support for upgrading to SD Maid Pro via in-app purchase.
-- Improved: Translations.
-- Improved: Clutter database.
-- Improved: UI and core logic related to upgrading to SD Maid Pro, better error handling.
-- Improved: Internal dependency updates to data serialization and bug tracking.
-- Improved: Slightly better app start performance due to better navigation related code. 
-- Fixed: SD Maid not recognizing the unlocker until reboot in some cases.
-- Fixed: Work around for ROM bug on some Samsung Galaxy/Note 8 custom ROMs if on Android 9 or lower. Caused a crash when loading data about installed apps via `PackageManager.getSharedLibraries(...)` (#3100).
-- Fixed: Debug logs not containing the install ID.
-- Changed: Hidden the hide unlocker behavior on Android 10 due to no longer being possible (#2972).
-
-### Explorer
+- Improved: Added workaround for apps with large caches on slow devices. Previously, if the system's details screen for an app was displaying "Calculating sizes...", SD Maid could treat this as successful deletion as there is also an edge case where the system tells SD Maid there is cache, but the "Clear cache" button is disabled as there isn't actually any cache (see #2517). Now SD Maid will backtrack and scan the UI hierarchy from a few levels up again? 
 - Improved: Now displaying more size digits, but only showing both allocated and actual file size if the difference is larger than 5% or the file size is smaller than 4096 byte (#3112).
 
 ### AppControl
